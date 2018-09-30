@@ -1,0 +1,43 @@
+{
+  "name": "bloggingtool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erinstrickland/BloggingTool.git"
+  },
+  "author": "Erin Strickland",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/erinstrickland/BloggingTool/issues"
+  },
+  "homepage": "https://github.com/erinstrickland/BloggingTool#readme",
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.1.2",
+    "@babel/preset-env": "7.1.0",
+    "@babel/preset-react": "7.0.0",
+    "@babel/preset-stage-0": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.6.0",
+    "jest-enzyme": "^6.1.2",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./test/configtest.js"
+  }
+}
