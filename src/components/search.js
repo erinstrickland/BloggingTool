@@ -1,17 +1,24 @@
 import React from "react"
+import regeneratorRuntime from "regenerator-runtime"
 
 class SearchTool extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { value: '' }
+        this.state = { value: '' , images: ''}
     }
 
     handleChange = (event) => {
         this.setState({ value: event.target.value })
     }
 
-    handleSubmit = (event) => {
+    handleSubmit = async (event) => {
         event.preventDefault()
+
+        let url = '/api/imagesearch?keyword=cat'
+
+        const results = await fetch(url)
+        const parsed = await results.json()
+        this.setState({images: parsed})
     }
 
     render() {
@@ -29,4 +36,4 @@ class SearchTool extends React.Component {
     }
 }
 
-    export default SearchTool
+export default SearchTool

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,8 @@
   "homepage": "https://github.com/erinstrickland/BloggingTool#readme",
   "dependencies": {
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "regenerator-runtime": "^0.12.1"
   },
   "devDependencies": {
     "@babel/core": "7.1.2",
@@ -35,7 +37,8 @@
     "jest": "^23.6.0",
     "jest-enzyme": "^6.1.2",
     "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "./test/configtest.js"
