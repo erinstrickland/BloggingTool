@@ -4,7 +4,7 @@ import regeneratorRuntime from "regenerator-runtime"
 class SearchTool extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { value: '' , images: ''}
+        this.state = { value: '' }
     }
 
     handleChange = (event) => {
@@ -14,11 +14,11 @@ class SearchTool extends React.Component {
     handleSubmit = async (event) => {
         event.preventDefault()
 
-        let url = '/api/imagesearch?keyword=cat'
+        let url = `/api/imagesearch?keyword=${this.state.value}`
 
         const results = await fetch(url)
         const parsed = await results.json()
-        this.setState({images: parsed})
+        this.props.updateHandler(parsed)
     }
 
     render() {

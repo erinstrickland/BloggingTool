@@ -4,11 +4,19 @@ import SearchTool from "./search"
 class Images extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { value: '' }
+    }
+    
+    parseImages = () => {
+        const display = this.props.imageList.map(image => {
+            return <img src={image} />
+        })
+        return display
     }
 
     render() {
-        <div>Success</div>
+        return <div>
+            {this.parseImages()}
+        </div>
     }
 }
 
