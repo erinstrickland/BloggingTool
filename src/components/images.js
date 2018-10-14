@@ -1,22 +1,19 @@
 import React from "react"
 import SearchTool from "./search"
+import Image from "./image"
 
 class Images extends React.Component {
     constructor(props) {
         super(props)
     }
+
+    parseImages = () => this.props.imageList.map(image => <Image image={image} />)
     
-    parseImages = () => {
-        const display = this.props.imageList.map(image => {
-            return <img src={image} />
-        })
-        return display
-    }
 
     render() {
-        return <div>
-            {this.parseImages()}
-        </div>
+        return <container>
+            <div> {this.parseImages()} </div>
+        </container>
     }
 }
 
